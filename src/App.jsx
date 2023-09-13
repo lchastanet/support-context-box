@@ -3,8 +3,6 @@ import styled from "@emotion/styled"
 import WidgetOne from "./components/WidgetOne"
 import WidgetTwo from "./components/WidgetTwo"
 
-import { TextContextProvider } from "./contexts/textContext"
-
 function App() {
   const MainContainer = styled.div`
     height: 350px;
@@ -17,13 +15,11 @@ function App() {
   console.log("App rendered")
 
   return (
-    <TextContextProvider>
-      <MainContainer>
-        <p>App</p>
-        <WidgetOne />
-        <WidgetTwo />
-      </MainContainer>
-    </TextContextProvider>
+    <MainContainer>
+      <p>App</p>
+      <WidgetOne />
+      <WidgetTwo />
+    </MainContainer>
   )
 }
 
